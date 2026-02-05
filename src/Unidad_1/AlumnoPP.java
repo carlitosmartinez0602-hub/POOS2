@@ -5,7 +5,6 @@ public class AlumnoPP {
     int ID;
     String Nombre;
     String Apellido;
-
     public void MostrarNombre(){
         System.out.println("Hola, soy un alumno y sé decir mi nombre.");
     }
