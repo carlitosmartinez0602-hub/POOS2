@@ -1,6 +1,5 @@
 package Unidad_1;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 
 public class Practica_1 {
