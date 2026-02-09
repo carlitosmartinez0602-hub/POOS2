@@ -12,10 +12,12 @@ public class RussianRoulette {
         System.out.println("\n|----------Russian Roulette----------|\n");
         for (int i = 1; i <= 6 ; i++) {
             if (i == car) {
-                System.out.println("iwi");
+                System.out.println("..................");
                 break;
             }else{
-                System.out.println("Jala el gatillo. (Presiona 1 o cualquier otro número)");
+                System.out.println("| ------------------ |");
+                System.out.println("| Jala el gatillo.   |");
+                System.out.println("| ------------------ |");
                 shot = bala.next();
                 cont++;
             }
