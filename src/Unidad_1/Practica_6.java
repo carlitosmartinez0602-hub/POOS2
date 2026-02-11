@@ -8,6 +8,7 @@ public class Practica_6 {
         String tog = JOptionPane.showInputDialog("Escribe lo que quieras: \n");
         if (tog == null || tog.trim().isEmpty()){
             JOptionPane.showMessageDialog(null, "Texto no válido :(");
+            return;
         }
         String en[] = tog.split(" ");
         String pc = "", fn=" ";
