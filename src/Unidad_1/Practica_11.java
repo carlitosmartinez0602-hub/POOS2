@@ -6,7 +6,7 @@ public class Practica_11 {
     static void main() {
         String contr = JOptionPane.showInputDialog(null, "Escribe una contraseña: ");
         String pass= "ITSPA123x";
-        if (contr.contains("ITSPA") && contr.endsWith("123x") && contr.equals(pass)) {
+        if (contr.contains("ITSPA") && contr.endsWith("123x") && contr.equals(pass) && contr.length()>=15) {
             System.out.println("Contraseña válida. Hola TilinInsano");
         }else{
             System.out.println("La contraseña no es válida :(");
