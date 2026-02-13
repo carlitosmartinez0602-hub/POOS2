@@ -1,5 +1,4 @@
 package Unidad_1;
-
 import javax.swing.*;
 
 public class Practica_10 {
