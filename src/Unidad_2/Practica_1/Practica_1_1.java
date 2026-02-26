@@ -10,6 +10,10 @@ public class Practica_1_1 {
             }
             return fctl;
         }
+        public long resta(long numero, long numero2){
+            fn = numero - numero2;
+            return fn;
+        }
         public long suma(long numero, long numero2 ){
             fn = numero + numero2;
             return fn;
