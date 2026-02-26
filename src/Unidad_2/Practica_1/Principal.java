@@ -6,7 +6,6 @@ public class Principal {
     public static void main(String[] args) {
 
         long n=0;
-        long fn=0;
         int el = Integer.parseInt(JOptionPane.showInputDialog(null,
                 "1.- Factorial\n" +
                 "2.- Suma\n" +
@@ -28,8 +27,7 @@ public class Principal {
 
                 n=Long.parseLong(JOptionPane.showInputDialog(null, "Dame un número: "));
                 Practica_1_1.Matematicas facto = new Practica_1_1.Matematicas();
-                fn = facto.factorial(n);
-                JOptionPane.showMessageDialog(null, "Resultado: " + fn);
+                JOptionPane.showMessageDialog(null, "Resultado: " + facto.factorial(n));
 
                 break;
             case 2:
@@ -37,8 +35,7 @@ public class Principal {
                 long n2 = Integer.parseInt(JOptionPane.showInputDialog(null, "Dame " +
                         "un segundo número: "));
                 Practica_1_1.Matematicas sum = new Practica_1_1.Matematicas();
-                fn = sum.suma(n,n2);
-                JOptionPane.showMessageDialog(null, "Resultado: " + fn);
+                JOptionPane.showMessageDialog(null, "Resultado: " +sum.suma(n,n2));
 
                 break;
             case 3:
@@ -52,8 +49,8 @@ public class Principal {
                 n=Long.parseLong(JOptionPane.showInputDialog(null, "Dame un número: "));
 
                 Practica_1_1.Matematicas loga = new Practica_1_1.Matematicas();
-                fnlog =loga.logaritmoNatural(n);
-                JOptionPane.showMessageDialog(null, "Resultado: " + fnlog);
+
+                JOptionPane.showMessageDialog(null, "Resultado: " + loga.logaritmoNatural(n));
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Opción no válida :(");
