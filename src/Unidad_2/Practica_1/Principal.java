@@ -43,7 +43,14 @@ public class Principal {
                 break;
             case 3:
                 double fnlog=0;
+
+                if (n <0) {
+                    JOptionPane.showMessageDialog(null, "No existen logaritmos " +
+                            "de números negativos");
+                    return;
+                }
                 n=Long.parseLong(JOptionPane.showInputDialog(null, "Dame un número: "));
+
                 Practica_1_1.Matematicas loga = new Practica_1_1.Matematicas();
                 fnlog =loga.logaritmoNatural(n);
                 JOptionPane.showMessageDialog(null, "Resultado: " + fnlog);
