@@ -50,7 +50,7 @@ public class Numeros {
             }
         } else if (ele==4) {
             System.out.println("Factorial de " + num);
-            for (int i=1 ; i< num; i++) {
+            for (int i=1 ; i<= num; i++) {
                 fac *= i;
             }
             System.out.println("Factorial de " + num + " es: " + fac);

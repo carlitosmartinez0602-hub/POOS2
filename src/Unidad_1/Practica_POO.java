@@ -6,7 +6,7 @@ public class Practica_POO {
     public static class Animal{
         String Nombre;
         int Peso;
-        
+
         Animal(String n, int p){
             Nombre = n;
             Peso = p;
@@ -15,9 +15,7 @@ public class Practica_POO {
             this.Peso = p;
             this.Nombre = n;
         }
-        public void MD(){
-            JOptionPane.showMessageDialog(null, "Nombre: " + Nombre +"\n"+ "Peso: " + Peso + " Kilos");
-        }
+        public void MD(){ JOptionPane.showMessageDialog(null, "Nombre: " + Nombre +"\n"+ "Peso: " + Peso + " Kilos"); }
 
         public String getN() {
             return Nombre;
@@ -35,9 +33,10 @@ public class Practica_POO {
             this.Peso = p;
         }
     }
+
     static void main() {
     Animal amlEjem= new Animal("Perro viralata", 8);
-    Animal amlEjem2 = new Animal(9,"Gato culiao");
+    Animal amlEjem2 = new Animal(9,"Gato menso");
     Animal amlU = new Animal("",0);
 
     amlEjem2.MD();
