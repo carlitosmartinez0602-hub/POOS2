@@ -5,13 +5,17 @@ import javax.swing.*;
 public class Principal {
     public static void main(String[] args) {
 
-        long n=0, n2=0;
+        long n=0, n2=0, n3=0;
         int el = Integer.parseInt(JOptionPane.showInputDialog(null,
                 "0.- Salir\n" +
                 "1.- Factorial (20 o menor)\n" +
                 "2.- Suma\n" +
                 "3.- Logarimo\n" +
                 "4.- Resta\n" +
+                "5.- Mayor de dos numeros\n" +
+                "6.- Par o Impar\n" +
+                "7.- Es primo\n" +
+                "8.- Promedio\n" +
                 "Selecciona la opción"));
 
         switch (el){
@@ -61,6 +65,30 @@ public class Principal {
                 Practica_1_1.Matematicas loga = new Practica_1_1.Matematicas();
 
                 JOptionPane.showMessageDialog(null, "Resultado: " + loga.logaritmoNatural(n));
+                break;
+            case 5:
+                n = Long.parseLong(JOptionPane.showInputDialog(null, "Dame un número: "));
+                n2 = Long.parseLong(JOptionPane.showInputDialog(null, "Dame un segundo número: "));
+
+                Practica_1_1.Matematicas mayMen = new Practica_1_1.Matematicas();
+                JOptionPane.showMessageDialog(null, "El mayor es: " + mayMen.mayorDosNumeros(n,n2));
+                break;
+            case 6:
+                n = Long.parseLong(JOptionPane.showInputDialog(null, "Dame un número: "));
+                Practica_1_1.Matematicas par = new Practica_1_1.Matematicas();
+                JOptionPane.showMessageDialog(null, "El numero: "+ n + " es " + par.esPar(n));
+                break;
+            case 7:
+                n = Long.parseLong(JOptionPane.showInputDialog(null, "Dame un número: "));
+                Practica_1_1.Matematicas primo = new Practica_1_1.Matematicas();
+                JOptionPane.showMessageDialog(null, "El número " + n + primo.esPrimo(n));
+                break;
+            case 8:
+                n = Long.parseLong(JOptionPane.showInputDialog(null, "Dame un número: "));
+                n2 = Long.parseLong(JOptionPane.showInputDialog(null, "Dame un segundo número: "));
+                n3 = Long.parseLong(JOptionPane.showInputDialog(null, "Dame un tercer número: "));
+                Practica_1_1.Matematicas prom = new Practica_1_1.Matematicas();
+                JOptionPane.showMessageDialog(null, "Promedio: " + prom.calcularPromedio(n,n2,n3));
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Opción no válida :(");

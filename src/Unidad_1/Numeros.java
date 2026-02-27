@@ -41,12 +41,17 @@ public class Numeros {
             }
         }else if(ele ==3){
             System.out.println("\n¿Es un número primo?");
-            for (int i = 2; i < Math.sqrt(num); i++) {
-                if (num % i ==0){
-                    System.out.println("El número " + num + "no es primo");
-                }else{
-                    System.out.println("El número " + num + " no es primo");
+            boolean primo = true;
+            for (int i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    primo = false;
+                    break;
                 }
+            }
+            if (primo) {
+                System.out.println("El número " + num + " es primo");
+            } else {
+                System.out.println("El número " + num + " no es primo");
             }
         } else if (ele==4) {
             System.out.println("Factorial de " + num);
