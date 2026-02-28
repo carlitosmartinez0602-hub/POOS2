@@ -4,6 +4,7 @@ public class Practica_1_1 {
     public static class Matematicas {
         long fn=0;
         String fnS;
+
         public long factorial(long numero) {
             long fctl = 1;
             for (long i = 1; i <= numero; i++) {
@@ -11,19 +12,23 @@ public class Practica_1_1 {
             }
             return fctl;
         }
+
         public long resta(long numero, long numero2){
             fn = numero - numero2;
             return fn;
         }
+
         public long suma(long numero, long numero2 ){
             fn = numero + numero2;
             return fn;
         }
+
         public double logaritmoNatural(double numero){
             double fn=0;
             fn = Math.log(numero);
             return fn;
         }
+
         public long mayorDosNumeros(long numero, long numero2){
             if (numero > numero2){
                 fn = numero;
@@ -32,6 +37,7 @@ public class Practica_1_1 {
             }
             return fn;
         }
+
         public String esPar(long numero){
             String par="Par", impar="Impar";
             if (numero % 2 == 0) {
@@ -41,6 +47,7 @@ public class Practica_1_1 {
             }
             return fnS;
         }
+
         public String esPrimo(long numero){
 
             String primo = " Es Primo", noPrimo=" No es Primo";
@@ -55,7 +62,6 @@ public class Practica_1_1 {
                     }
                 }
             }
-
             if (esPrimo) {
                 fnS = primo;
             } else {
@@ -65,6 +71,18 @@ public class Practica_1_1 {
         }
         public long calcularPromedio(long numero, long numero2, long numero3){
             fn = (numero + numero2 + numero3)/3;
+            return fn;
+        }
+        public String invertirNumero(String numero){
+            fnS = new StringBuilder(numero).reverse().toString();
+            return fnS;
+        }
+        public long sumaDigitos(long numero){
+            long suma=0;
+            while(numero > 0){
+                fn += numero % 10;
+                numero = numero / 10;
+            }
             return fn;
         }
     }

@@ -16,7 +16,9 @@ public class Principal {
                 "6.- Par o Impar\n" +
                 "7.- Es primo\n" +
                 "8.- Promedio\n" +
-                "Selecciona la opción"));
+                "9.- Inverso de un número\n" +
+                "10.- Suma de dígitos\n" +
+                "\nSelecciona la opción"));
 
         switch (el){
             case 0:
@@ -89,6 +91,18 @@ public class Principal {
                 n3 = Long.parseLong(JOptionPane.showInputDialog(null, "Dame un tercer número: "));
                 Practica_1_1.Matematicas prom = new Practica_1_1.Matematicas();
                 JOptionPane.showMessageDialog(null, "Promedio: " + prom.calcularPromedio(n,n2,n3));
+                break;
+            case 9:
+                String nS = JOptionPane.showInputDialog(null, "Dame un número: ");
+                Practica_1_1.Matematicas inverso = new Practica_1_1.Matematicas();
+                String txtIn = inverso.invertirNumero(nS);
+                long NL = Long.parseLong(txtIn);
+                JOptionPane.showMessageDialog(null, "El inverso de: " + nS +" es " + NL);
+                break;
+            case 10:
+                n = Long.parseLong(JOptionPane.showInputDialog(null, "Dame un número"));
+                Practica_1_1.Matematicas sumaD = new Practica_1_1.Matematicas();
+                JOptionPane.showMessageDialog(null, "La suma de " + n + " es: " + sumaD.sumaDigitos(n));
                 break;
             default:
                 JOptionPane.showMessageDialog(null, "Opción no válida :(");
