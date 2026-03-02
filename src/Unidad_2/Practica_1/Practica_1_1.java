@@ -78,7 +78,6 @@ public class Practica_1_1 {
             return fnS;
         }
         public long sumaDigitos(long numero){
-            long suma=0;
             while(numero > 0){
                 fn += numero % 10;
                 numero = numero / 10;

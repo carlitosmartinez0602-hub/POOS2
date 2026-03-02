@@ -10,7 +10,7 @@ public class Principal {
                 "0.- Salir\n" +
                 "1.- Factorial (20 o menor)\n" +
                 "2.- Suma\n" +
-                "3.- Logarimo\n" +
+                "3.- Logaritmo\n" +
                 "4.- Resta\n" +
                 "5.- Mayor de dos numeros\n" +
                 "6.- Par o Impar\n" +
