@@ -20,10 +20,6 @@ public class Practica_2_1 {
             this.edad = edad;
         }
 
-        public persona() {
-
-        }
-
         public String getNomb() {
             return nomb;
         }
@@ -54,6 +50,17 @@ public class Practica_2_1 {
 
         public void setId(int id) {
             this.id = id;
+        }
+
+        @Override
+        public String toString() {
+            return "persona{" +
+                    "nomb='" + nomb + '\'' +
+                    ", apMat='" + apMat + '\'' +
+                    ", apPat='" + apPat + '\'' +
+                    ", id=" + id +
+                    ", edad=" + edad +
+                    '}';
         }
     }
 }
