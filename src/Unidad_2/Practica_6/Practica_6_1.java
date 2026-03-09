@@ -5,10 +5,6 @@ public class Practica_6_1 {
         private int nPag;
         private String autor, titulo, ISBN;
 
-        public String getISBN() {
-            return ISBN;
-        }
-
         public void setISBN(String ISBN) {
             this.ISBN = ISBN;
         }
