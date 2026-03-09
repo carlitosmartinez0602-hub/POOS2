@@ -45,7 +45,4 @@ public class Practica_6_1 {
                     " tiene " + nPag + " páginas.";
         }
     }
-    public static class libreria{
-
-    }
 }
