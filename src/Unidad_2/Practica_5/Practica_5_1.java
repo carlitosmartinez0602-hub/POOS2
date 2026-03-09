@@ -12,17 +12,17 @@ public class Practica_5_1 {
             this.fn = 0;
         }
         public void suma(){
-            this.fn = n1 + n2;
+            this.fn = this.n1 + this.n2;
         }
         public void resta(){
-            this.fn = n1 - n2;
+            this.fn = this.n1 - this.n2;
         }
         public void multiplicacion(){
-            this.fn = n1 * n2;
+            this.fn = this.n1 * this.n2;
         }
         public void division() {
             if (n2 != 0) {
-                this.fn = n1 / n2;
+                this.fn = this.n1 / this.n2;
             }else{
                 JOptionPane.showMessageDialog(null,"Error: es imposible dividir por 0");
             }
