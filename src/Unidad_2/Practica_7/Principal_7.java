@@ -19,7 +19,7 @@ public class Principal_7 {
                     JOptionPane.showMessageDialog(null, "Ten un buen día");
                     break;
                 case 1:
-                    for (int i = 1; i <= 3; i++) {
+                    for (int i = 0; i < 3; i++) {
                         Practica_7_1.Alumno alum = new Practica_7_1.Alumno();
                         alum.setMatr(pDat("Matricula: "));
                         alum.setNomb(pDat("Nombre: "));
@@ -64,7 +64,7 @@ public class Principal_7 {
                 men += "Alumno " + (i + 1) + ": \n" + a.toString() + "\n";
             }
             JOptionPane.showMessageDialog(null, men);
-        }while (true);
+        }while (el!=0);
     }
     public static String pDat(String txt){
         return JOptionPane.showInputDialog(txt);
