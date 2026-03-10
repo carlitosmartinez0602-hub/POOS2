@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Practica_16 {
+public class    Practica_16 {
     static void main() {
         ArrayList<Long> num = new ArrayList<>();
         String p="";
