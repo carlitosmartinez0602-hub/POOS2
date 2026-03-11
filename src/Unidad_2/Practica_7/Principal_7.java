@@ -20,12 +20,13 @@ public class Principal_7 {
                     break;
                 case 1:
                     for (int i = 0; i < 3; i++) {
-                        Practica_7_1.Alumno alum = new Practica_7_1.Alumno();
-                        alum.setMatr(pDat((i+1) + ".-" + " Matricula: "));
-                        alum.setNomb(pDat((i+1) + ".-" + " Nombre: "));
-                        alum.setaPat(pDat((i+1) + ".-" + " Apellido Paterno: "));
-                        alum.setaMat(pDat((i+1) + ".-" + " Apellido Materno: "));
-                        alum.setEdad(Integer.parseInt(pDat( (i+1) + ".- " + " Edad: ")));
+                        Practica_7_1.Alumno alum = new Practica_7_1.Alumno(
+                        pDat((i+1) + ".-" + " Matricula: "),
+                        pDat((i+1) + ".-" + " Nombre: "),
+                        pDat((i+1) + ".-" + " Apellido Paterno: "),
+                        pDat((i+1) + ".-" + " Apellido Materno: "),
+                        Integer.parseInt(pDat( (i+1) + ".- " + " Edad: "))
+                        );
                         datos.add(alum);
                     }
                     break;

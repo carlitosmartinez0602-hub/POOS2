@@ -5,13 +5,21 @@ public class Practica_7_1 {
         private String matr, nomb, aPat, aMat;
         private int edad;
 
-        public Alumno() {
+        public Alumno(String matr, String nomb, String aPat, String aMat, int edad) {
+            this.matr = matr;
+            this.nomb = nomb;
+            this.aPat = aPat;
+            this.aMat = aMat;
+            this.edad = edad;
+        }
+
+        /*public Alumno() {
             this.matr = "";
             this.nomb = "";
             this.aPat = "";
             this.aMat = "";
             this.edad = 0;
-        }
+        }*/
 
         public String getMatr() {
             return matr;
