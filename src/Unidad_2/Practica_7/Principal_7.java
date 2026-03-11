@@ -32,7 +32,7 @@ public class Principal_7 {
                     break;
                 case 2:
                     elAlu = Integer.parseInt(JOptionPane.showInputDialog("Elige la opción: \n" +
-                            "1.- Modificar Alumno 1\n" +
+                            "1.- Modificar Alumno 1 \n" +
                             "2.- Modificar ALumon 2\n" +
                             "3.- Modificar Alumno 3\n" +
                             "Selecciona una opción: \n"));
