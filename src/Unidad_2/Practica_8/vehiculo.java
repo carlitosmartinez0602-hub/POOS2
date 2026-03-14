@@ -1,7 +1,7 @@
 package Unidad_2.Practica_8;
 
 public class vehiculo {
-    public class Vehiculo {
+    public static class Vehiculo {
 
         private String placas;
         private String marca;
