@@ -3,8 +3,8 @@ package Unidad_2.Practica_8;
 import javax.swing.*;
 public class Principal_8 {
     static void main(String[] args) {
-        vehiculo.Vehiculo veh1 = new vehiculo.Vehiculo("ABC1231","Toyota"," Supra",500000);
-        vehiculo.Vehiculo veh2  = new vehiculo.Vehiculo("DEF0989","Chevrolet"," El camino",600000);
+        vehiculo.Vehiculo veh1 = new vehiculo.Vehiculo("FFF6666","Subaru"," Forester",890000);
+        vehiculo.Vehiculo veh2  = new vehiculo.Vehiculo("GGG7777","Mitsubishi"," Lancer ",430000);
 
         pr("Vehículo 1: \n" + veh1.toString());
         pr("Vehículo 2: \n" + veh2.toString());

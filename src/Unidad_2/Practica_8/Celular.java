@@ -1,6 +1,6 @@
 package Unidad_2.Practica_8;
 
-public class Celular {  // Nombre de clase con mayúscula
+public class Celular {
     private String marca;
     private String nSerie;
     private int precio;
