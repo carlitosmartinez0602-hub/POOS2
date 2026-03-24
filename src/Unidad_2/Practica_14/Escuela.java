@@ -14,16 +14,26 @@ public class Escuela {
                             "7. Mostrar sin Calificación\n8. Mostrar Promedio\n0. Salir"));
 
             switch(el) {
-                case 1: registrarEstudiante(); break;
-                case 2: registrarMaterias(); break;
-                case 3: asignarCalificacion(); break;
-                case 4: calcularPromedio(); break;
-                case 5: JOptionPane.showMessageDialog(null, e.mostrarTodas()); break;
-                case 6: JOptionPane.showMessageDialog(null, e.mostrarConCalif()); break;
-                case 7: JOptionPane.showMessageDialog(null, e.mostrarSinCalif()); break;
-                case 8: mostrarPromedio(); break;
-                case 0: JOptionPane.showMessageDialog(null, "Adiós"); break;
-                default: JOptionPane.showMessageDialog(null, "Opción inválida");
+                case 1: registrarEstudiante();
+                    break;
+                case 2: registrarMaterias();
+                    break;
+                case 3: asignarCalificacion();
+                    break;
+                case 4: calcularPromedio();
+                    break;
+                case 5: JOptionPane.showMessageDialog(null, e.mostrarTodas());
+                    break;
+                case 6: JOptionPane.showMessageDialog(null, e.mostrarConCalif());
+                    break;
+                case 7: JOptionPane.showMessageDialog(null, e.mostrarSinCalif());
+                    break;
+                case 8: mostrarPromedio();
+                    break;
+                case 0: JOptionPane.showMessageDialog(null, "Adiós");
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opción inválida");
             }
         } while(el != 0);
     }
