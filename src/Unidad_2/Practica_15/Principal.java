@@ -8,7 +8,7 @@ public class Principal {
         try{
             p1.setId(Integer.parseInt(pDat("ID: ")));
             p1.setNombre(pDat("Nombre: "));
-            p1.setApellidoPat(pDat("Apellido Paterno: "));
+            p1.setApellidoPat(pDat( "Apellido Paterno: "));
             p1.setApellidoMat(pDat("Apellido Materno: "));
             JOptionPane.showMessageDialog(null, "Datos: \n" + p1.toString());
         }catch (validarNombreException e){
