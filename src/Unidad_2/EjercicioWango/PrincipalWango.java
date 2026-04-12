@@ -4,12 +4,14 @@ import javax.swing.*;
 
 public class PrincipalWango {
     static void main(String[] args) {
-        CuentaBancaria c1 = new CuentaBancaria(" ", 0);
         String titular = pDat("Nombre del titular");
-        double saldo = Integer.parseInt(pDat("Saldo inicial"));
+        double saldo = Double.parseDouble(pDat("Saldo inicial"));
 
+        CuentaBancaria c1 = new CuentaBancaria(titular, saldo);
+
+        int el = 0;
         do {
-            int el = Integer.parseInt(pDat(
+            el = Integer.parseInt(pDat(
                     "0.- Salir\n" +
                             "1.- depositar\n" +
                             "2.- Retirar\n" +
@@ -22,7 +24,8 @@ public class PrincipalWango {
                     dInf("ten un buen día");
                     break;
                 case 1:
-                    dInf("Depositar");
+                    double mntDep = Double.parseDouble(pDat("Monto a depositar: "));
+                    c1.depositar(mntDep);
                     break;
                 case 2:
                     double mntRet = Double.parseDouble(pDat("Monto a retirar"));
@@ -38,7 +41,8 @@ public class PrincipalWango {
                 default:
                     dInf("Opción no válida");
             }
-        }while (true);
+        }while (el != 0);
+
     }
     public static String pDat(String txt){
         return JOptionPane.showInputDialog(txt);
