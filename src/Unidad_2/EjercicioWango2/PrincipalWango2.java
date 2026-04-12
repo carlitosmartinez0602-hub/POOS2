@@ -1,7 +1,5 @@
 package Unidad_2.EjercicioWango2;
 
-import Unidad_2.Practica_15.Persona;
-
 import javax.swing.*;
 
 public class PrincipalWango2 {
