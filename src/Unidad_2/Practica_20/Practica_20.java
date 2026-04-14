@@ -23,7 +23,7 @@ public class Practica_20 {
                 caden="";
             }
         }
-        //Mostrar info
+        //Mostrar info del ultimo
         String fn = " ";
         fn += caden + " - " + cont;
         dInf(fn);
