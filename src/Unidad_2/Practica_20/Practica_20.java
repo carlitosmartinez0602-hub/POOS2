@@ -6,6 +6,10 @@ public class Practica_20 {
     static void main(String[] args) {
         //Pedir al usuario una cadena
         String cad = pDat("Lista de compra: ");
+        //validar si esta vacio el JOption
+        if (cad.isEmpty()) {
+            return;
+        }
         int cont=0;
         String caden="";
         //Separar las palabras de la cadena ademas de espaciarlas un renglón

@@ -1,20 +1,26 @@
 package Unidad_2.Pre_Examen;
 
 import javax.swing.*;
-import java.util.Arrays;
 
 public class Pre_Examen {
     static void main(String[] args) {
+        //Pedir la cadena
         String cad = pDat("Cadena: (letras y números)");
-        int cont=0, suma=0;
-        String[] num = cad.split("");
-        for (int i = 0; i <cad.length(); i++) {
-            char c  = cad.charAt(i);
-            if (Character.isDigit(c)) {
-                suma += Character.getNumericValue(c)    ;
+        //Validar si el JOption esta vacio
+        if (cad.isEmpty()) {
+            return;
+        }
+        int suma=0;
+        //Separar las letras de los numeros dejando solo los numeros
+        String[] num = cad.split("\\D+");
+        //contar y separar cada numero para sumarlo
+        for (int i = 0; i <num.length; i++) {
+            if (!num[i].isEmpty()) {
+                suma += Integer.parseInt(num[i]);
             }
         }
-        dInf("Suma: " + Arrays.toString(num));
+        //Mostrar info
+        dInf("Suma: " + suma);
     }
     public static String pDat(String txt){
         return JOptionPane.showInputDialog(txt);
