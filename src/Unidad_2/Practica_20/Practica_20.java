@@ -10,6 +10,8 @@ public class Practica_20 {
         if (cad.isEmpty()) {
             return;
         }
+        int mL=0;
+        String pL="";
         int cont=0;
         String caden="";
         //Separar las palabras de la cadena ademas de espaciarlas un renglón
@@ -23,6 +25,10 @@ public class Practica_20 {
             }
             if (c == '\n') {
                 dInf(caden + " - " + cont);
+                if (cont >mL) {
+                    mL = cont;
+                    pL =caden;
+                }
                 cont=0;
                 caden="";
             }
@@ -31,6 +37,11 @@ public class Practica_20 {
         String fn = " ";
         fn += caden + " - " + cont;
         dInf(fn);
+        if (cont > mL) {
+            mL = cont;
+            pL = caden;
+        }
+        dInf("Producto mas largo: " + pL + " - " + mL);
     }
     public static String pDat(String txt){
         return JOptionPane.showInputDialog(txt);
