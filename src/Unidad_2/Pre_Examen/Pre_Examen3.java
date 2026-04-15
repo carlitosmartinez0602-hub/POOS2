@@ -1,4 +1,4 @@
-package Unidad_2.Pre_Examen3;
+package Unidad_2.Pre_Examen;
 
 import javax.swing.*;
 
@@ -10,8 +10,7 @@ public class Pre_Examen3 {
         int a=0;
         String caden="";
         String mc="";
-        int mC=0;
-        for (int i = 0; i < cade.length(); i++) {
+        for (int i = 1; i < cade.length(); i++) {
             char c = cade.charAt(i);
             if (Character.isLetter(c)) {
                 cont++;
@@ -22,11 +21,11 @@ public class Pre_Examen3 {
                 if (cont > a) {
                     a = cont;
                 }
+                if (cont >= 5) {
+                    mc += " - " + caden;
+                }
                 cont = 0;
                 caden = "";
-            }
-            if (c > 5) {
-                mc += caden;
             }
         }
         String fn="";
