@@ -25,8 +25,11 @@ public class Pre_Examen3 {
                     mc += " - " + caden;
                 }
                 cont = 0;
-                caden = "";
+                caden = " ";
             }
+        }
+        if (cont >= 5) {
+            mc += " - " + caden;
         }
         String fn="";
         fn += caden + " - " + cont;
