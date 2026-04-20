@@ -4,14 +4,22 @@ import javax.swing.*;
 
 public class main {
     static void main(String[] args) {
-        int el = 0;
         String pro = pDat("Nombre del producto: ");
         double precioP = Double.parseDouble(pDat("Precio del producto: "));
         int cant = Integer.parseInt(pDat("Cantidad de producto: "));
 
-        Producto prod = new Producto(pro, precioP, cant);
-        do {
-            try {
+        validaciones val = new validaciones();
+        Producto prod = null;
+
+        try {
+            val.validarPrecio((int)precioP);
+            val.validarCantidad(cant);
+
+            prod = new Producto(pro, precioP, cant);
+            dInf("¡Producto creado exitosamente!");
+
+            int el = 0;
+            do {
                 el = Integer.parseInt(pDat("Menú: \n" +
                         "0.- Salir \n" +
                         "1.- Agregar Stock \n" +
@@ -38,15 +46,20 @@ public class main {
                         dInf("¡Opción inválida!");
                         break;
                 }
-            } catch (precioInvalidoException | cantidadInvalidaException |stockInsuficienteException e) {
-                dInf(e.getMessage());
-            }
-        }while (el != 0);
+            } while (el != 0);
+
+        } catch (precioInvalidoException | cantidadInvalidaException e) {
+            dInf("Error al crear producto: " + e.getMessage());
+        } catch (stockInsuficienteException e) {
+            dInf("Error en venta: " + e.getMessage());
+        }
     }
-    public static String pDat(String txt){
+
+    public static String pDat(String txt) {
         return JOptionPane.showInputDialog(txt);
     }
-    public static void dInf(String txt){
+
+    public static void dInf(String txt) {
         JOptionPane.showMessageDialog(null, txt);
     }
 }

@@ -1,7 +1,5 @@
 package Unidad_2.Pre_Examen3;
 
-import javax.swing.*;
-
 public class validaciones {
     public void validarCantidad(int cantidad) throws cantidadInvalidaException{
         if (cantidad < 0) {
