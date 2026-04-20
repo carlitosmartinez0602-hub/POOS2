@@ -4,10 +4,18 @@ import javax.swing.*;
 
 public class main {
     static void main() {
-        int el=0;
-        el = Integer.parseInt(pDat("Elige la opcion: " +
-                "0.- Salir\n" +
-                "1.- "));
+        String nmbAl = pDat("Nombre del alumno: ");
+        int edadAl = Integer.parseInt(pDat("Edad del alumno"));
+        validaciones val = new validaciones();
+        Alumno al = new Alumno(nmbAl,edadAl);
+
+        try {
+            val.validarNombre(nmbAl);
+            val.validarEdad(edadAl);
+            dInf("Datos: " + al.toString());
+        } catch (nombreinvalidoException | edadinvalidaException e) {
+            dInf("Error: " + e.getMessage());
+        }
     }
     public static String pDat(String txt){
         return JOptionPane.showInputDialog(txt);

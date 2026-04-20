@@ -11,9 +11,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" +
-                "nombre='" + nombre + '\'' +
-                ", edad=" + edad +
-                '}';
+        return "Alumno: " + nombre + "\n" +
+                "Edad: " + edad ;
     }
 }

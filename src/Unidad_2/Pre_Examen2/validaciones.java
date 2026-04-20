@@ -9,8 +9,8 @@ public class validaciones {
         }
     }
     public void validarNombre(String nombre) throws nombreinvalidoException{
-        if (nombre.isEmpty() && tieneNumeros(nombre)) {
-            JOptionPane.showMessageDialog(null, "¡El nombre no peude tener números en el mismo!");
+        if (nombre.isEmpty() || tieneNumeros(nombre)) {
+            JOptionPane.showMessageDialog(null, "¡El nombre no puede contener números!");
         }
     }
 
