@@ -12,7 +12,7 @@ public class main {
         try {
             val.validarNombre(nmbAl);
             val.validarEdad(edadAl);
-            dInf("Datos: " + al.toString());
+            dInf("Datos: \n" + al.toString());
         } catch (nombreinvalidoException | edadinvalidaException e) {
             dInf("Error: " + e.getMessage());
         }
