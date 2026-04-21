@@ -22,7 +22,7 @@ public class Producto {
     }
     public void vender(int cantidad) throws precioInvalidoException, stockInsuficienteException, cantidadInvalidaException {
         val.validarCantidad(cantidad);
-        val.validarPrecio((int)this.precio  );
+        val.validarPrecio((int)this.precio);
         val.validarStock(cantidad, this.stock);
         this.stock -= cantidad;
         double total = this.precio * cantidad;
