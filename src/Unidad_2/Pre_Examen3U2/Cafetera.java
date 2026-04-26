@@ -9,18 +9,25 @@ public class Cafetera {
         this.cantidadActual = 0;
     }
 
-    public Cafetera(int capacidadMaxima) {
+    public Cafetera(int capacidadMaxima) throws CafeNegativoException{
         this.capacidadMaxima = capacidadMaxima;
         this.cantidadActual = capacidadMaxima;
-    }
-    public Cafetera(int capacidadMaxima, int cantidadActual) {
-        this.capacidadMaxima = capacidadMaxima;
-        if (cantidadActual > capacidadMaxima) {
-            this.cantidadActual = capacidadMaxima;
-        }else {
-            this.cantidadActual = cantidadActual;
+        if (capacidadMaxima < 0){
+            throw new CafeNegativoException("¡El café no puede ser negativo!");
         }
+
     }
+        public Cafetera(int capacidadMaxima, int cantidadActual) throws CafeNegativoException{
+            this.capacidadMaxima = capacidadMaxima;
+            if (capacidadMaxima < 0 || cantidadActual < 0) {
+                throw new CafeNegativoException("¡El café no puede ser negativo!");
+            }
+            if (cantidadActual > capacidadMaxima) {
+                this.cantidadActual = capacidadMaxima;
+            }else {
+                this.cantidadActual = cantidadActual;
+            }
+        }
 
     public int getCapacidadMaxima() {
         return capacidadMaxima;
@@ -41,6 +48,7 @@ public class Cafetera {
     public void llenarCafetera(){
         this.cantidadActual = capacidadMaxima;
     }
+
     public void servirTaza(int TT) throws CafeServidoInvalidoException{
         if (TT <= 0) {
             throw new CafeServidoInvalidoException("¡La cantidad de café debe ser mayor a cero y no puede ser negativa!");
