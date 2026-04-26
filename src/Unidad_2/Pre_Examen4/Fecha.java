@@ -20,9 +20,9 @@ public class Fecha {
         validar();
     }
     public void leer(){
-        int d = Integer.parseInt(MetodosAuxiliares.pDat("ingresa el día: "));
-        int m = Integer.parseInt(MetodosAuxiliares.pDat("ingresa el mes: "));
-        int a = Integer.parseInt(MetodosAuxiliares.pDat("ingresa el año: "));
+        int d = Integer.parseInt(MetodosAuxiliares.pDat("Ingresa el día: "));
+        int m = Integer.parseInt(MetodosAuxiliares.pDat("Ingresa el mes: "));
+        int a = Integer.parseInt(MetodosAuxiliares.pDat("Ingresa el año: "));
         this.dia =d;
         this.mes =m;
         this.año =a;
@@ -88,7 +88,19 @@ public class Fecha {
                 MetodosAuxiliares.obtenerNombreMes(mes) + " de " + año;
     }
     public int diasTranscurridos() {
-        return 0;
+        int total = 0;
+        for (int i = 1900; i < año; i++) {
+            if ((i % 4 == 0 && i % 100 != 0) || (i % 400 == 0)) {
+                total += 366;
+            } else {
+                total += 365;
+            }
+        }
+        for (int i = 1; i < mes; i++) {
+            total += diasMes(i);
+        }
+        total += dia;
+        return total - 1;
     }
     public int diaSemana(){
         int dias = diasTranscurridos();
