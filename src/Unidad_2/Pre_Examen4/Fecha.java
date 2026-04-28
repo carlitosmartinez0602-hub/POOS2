@@ -40,7 +40,7 @@ public class Fecha {
             dia = 1;
         }
     }
-    public boolean bisiesto(){
+        public boolean bisiesto(){
         return (año % 4 == 0 && año % 100 != 0) || (año % 400 == 0);
     }
     public int diasMes(int mes){
