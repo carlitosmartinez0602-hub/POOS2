@@ -13,6 +13,13 @@ public class Libro {
         this.val = new Validaciones();
     }
 
+    public Libro(String titulo, String autor, int disponibles, Validaciones val) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.disponibles = disponibles;
+        this.val = new Validaciones();
+    }
+
     public void registrarLibro(String nombreLibro, String nombreAutor, int cantidad){
         this.titulo = nombreLibro;
         this.autor = nombreAutor;
