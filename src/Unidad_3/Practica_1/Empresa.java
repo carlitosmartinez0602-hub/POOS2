@@ -62,7 +62,7 @@ public class Empresa {
 
     public String mostrarEmpresa() {
 
-        String txt = "|-----Datos departamento-----|" +
+        String txt = "|-----Datos Departamento-----|" +
                 "\nRFC: " + rfc +
                 "\nRazón Social: " + razonSocial +
                 "\nGerente: " + nombreGerente +
