@@ -3,7 +3,7 @@ package Unidad_3.Practica_2;
 import javax.swing.*;
 
 public class MainLibro {
-    public static void main(String[] args) {
+     static void main(String[] args) {
         Libro libro = null;
         int el = 0;
         do {

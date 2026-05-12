@@ -1,9 +1,8 @@
 package Unidad_3.Practica_1;
 
-import javax.swing.JOptionPane;
+import javax.swing.*;
 public class MainEmpresa {
     static void main(String[] args) {
-
         Empresa empresa = null;
         int el;
         do {
