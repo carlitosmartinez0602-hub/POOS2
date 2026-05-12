@@ -22,6 +22,7 @@ public class MainEstacionamiento {
                 }catch (FormatoDeNumeroException e){
                     dInf(e.getMessage());
                 }
+
                 switch (el){
                     case 0:
                         dInf("Adios");
