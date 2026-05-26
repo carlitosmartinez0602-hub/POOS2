@@ -5,7 +5,6 @@ public class Car {
     protected double regularPrice;
     protected String color;
 
-    // Constructor
     public Car(int speed, double regularPrice, String color) {
         this.speed = speed;
         this.regularPrice = regularPrice;
