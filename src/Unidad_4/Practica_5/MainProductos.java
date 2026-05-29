@@ -107,7 +107,15 @@ public class MainProductos {
                     }
                     break;
                 case 7:
-
+                    String buscarLoteStr = pDat("Ingrese el número de lote a buscar:");
+                    int buscarLote = Integer.parseInt(buscarLoteStr);
+                    for (int i = 0; i < listaProductos.size(); i++) {
+                        Productos p = listaProductos.get(i);
+                        if (p.getBatchNumber() == buscarLote) {
+                            dInf("|-----Producto encontrado-----|\n\n" + p.toString());
+                            break;
+                        }
+                    }
                     break;
             }
         }while (el!=0);
