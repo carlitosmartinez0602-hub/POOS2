@@ -97,7 +97,7 @@ public class MainCar {
                     dInf("Truck 2 creado y guardado en referencia Car");
                     break;
                 case 7:
-                    String mensaje = "Precios de venta\n";
+                    String mensaje = "Precios de venta  \n";
 
                     if (sedan != null) {
                         mensaje += "\nSedan: $" + sedan.getSalePrice();
