@@ -13,6 +13,6 @@ public class PCongeladoAgua extends ProductosCongelados{
         return
         "\n|-----Producto Congelado por Agua-----|\n" +
                 super.toString() +
-                "\nSalinidad por litro: " + salinityPerLiter + " g/L";
+                "\nSalinidad por litro: " + salinityPerLiter + "g/L";
     }
 }
