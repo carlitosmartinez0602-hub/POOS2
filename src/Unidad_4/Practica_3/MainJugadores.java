@@ -35,7 +35,7 @@ public class MainJugadores {
                         dInf("No se pueden agregar mas jugadores");
                         break;
                     }
-                    listaJugadores = null;
+                    //listaJugadores = null;
 
                     // portero
                     int numPortero = Integer.parseInt(pDat("Numero del portero: "));
@@ -45,6 +45,7 @@ public class MainJugadores {
                     int minPortero = Integer.parseInt(pDat("Tiempo de juego del portero: "));
                     Portero portero = new Portero(numPortero, nomPortero, tallaPortero, edadPortero, minPortero);
                     listaJugadores.add(portero);
+                    dInf("Portero creado con éxito");
 
                     // defensa
                     int numDefensa = Integer.parseInt(pDat("Numero del defensa: "));
@@ -55,6 +56,8 @@ public class MainJugadores {
                     int golesDefensa = Integer.parseInt(pDat("Goles del defensa: "));
                     Defensa defensa = new Defensa(numDefensa, nomDefensa, tallaDefensa, edadDefensa, golesDefensa, minDefensa);
                     listaJugadores.add(defensa);
+                    dInf("Defensa creado con éxito");
+
 
                     // medio
                     int numMedio = Integer.parseInt(pDat("Numero del medio: "));
@@ -65,6 +68,8 @@ public class MainJugadores {
                     int golesMedio = Integer.parseInt(pDat("Goles del medio: "));
                     Medio medio = new Medio(numMedio, nomMedio, tallaMedio, edadMedio, golesMedio, minMedio);
                     listaJugadores.add(medio);
+                    dInf("Medio creado con éxito");
+
 
                     // delantero 1
                     int numDelantero1 = Integer.parseInt(pDat("Numero del delantero 1: "));
@@ -75,6 +80,8 @@ public class MainJugadores {
                     int golesDelantero1 = Integer.parseInt(pDat("Goles del delantero 1: "));
                     Delantero delantero1 = new Delantero(numDelantero1, nomDelantero1, tallaDelantero1, edadDelantero1, golesDelantero1, minDelantero1);
                     listaJugadores.add(delantero1);
+                    dInf("Primer delantero creado con éxito");
+
 
                     // delantero 2
                     int numDelantero2 = Integer.parseInt(pDat("Numero del delantero 2: "));
@@ -85,6 +92,8 @@ public class MainJugadores {
                     int golesDelantero2 = Integer.parseInt(pDat("Goles del delantero 2: "));
                     Delantero delantero2 = new Delantero(numDelantero2, nomDelantero2, tallaDelantero2, edadDelantero2, golesDelantero2, minDelantero2);
                     listaJugadores.add(delantero2);
+                    dInf("Segundo delantero creado con éxito");
+
 
                     dInf("Los 5 jugadores se crearon con éxito");
                     break;
@@ -161,9 +170,7 @@ public class MainJugadores {
 
                     for (int i = 0; i < listaJugadores.size(); i++) {
                         Jugador j = listaJugadores.get(i);
-                        msgDatos += "\n--- Jugador " + (i + 1) + " ---";
                         msgDatos += j.toString();
-                        msgDatos += "\n";
                     }
                     dInf(msgDatos);
                     break;

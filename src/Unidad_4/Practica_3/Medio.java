@@ -25,4 +25,11 @@ public class Medio extends Jugador{
     public void setMinutesPlayed(int minutesPlayed) {
         this.minutesPlayed = minutesPlayed;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "Goles anotados: " + goalsScored +
+                "Minutos jugados: " + minutesPlayed;
+    }
 }
