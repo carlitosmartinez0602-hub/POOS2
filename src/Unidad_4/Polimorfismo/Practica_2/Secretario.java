@@ -4,7 +4,7 @@ public class Secretario extends Empleado{
     private String dispatch;
     private String faxNumber;
 
-    public Secretario(String cipher, String name, String lastName, String direction, int yearsOfService, int telephone, double salary, Empleado supervisor, String  dispatch, String faxNumber) {
+    public Secretario(String cipher, String name, String lastName, String direction, int yearsOfService, String telephone, double salary, Empleado supervisor, String  dispatch, String faxNumber) {
         super(cipher, name, lastName, direction, yearsOfService, telephone, salary, supervisor);
         this.dispatch = dispatch;
         this.faxNumber = faxNumber;

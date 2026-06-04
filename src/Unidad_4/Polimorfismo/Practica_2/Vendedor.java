@@ -10,7 +10,7 @@ public class Vendedor extends Empleado{
     private String[] customers;
     private double percentComission;
 
-    public Vendedor(String cipher, String name, String lastName, String direction, int yearsOfService, int telephone, double salary, Empleado supervisor, Auto auto, String telephone1, String salesArea, String[] customers, double percentComission) {
+    public Vendedor(String cipher, String name, String lastName, String direction, int yearsOfService, String telephone, double salary, Empleado supervisor, Auto auto, String telephone1, String salesArea, String[] customers, double percentComission) {
         super(cipher, name, lastName, direction, yearsOfService, telephone, salary, supervisor);
         this.auto = auto;
         this.telephone = telephone1;
@@ -54,11 +54,12 @@ public class Vendedor extends Empleado{
             customersList += "\n " + (i+1) + " ";
         }
         return "|-----Vendedor-----|" +
+                super.toString() +
                 "\nÁrea de Venta: " + salesArea +
                 "\nTeléfono: " + telephone +
                 "\n% Comisión por Ventas: " + percentComission + "%" +
                 "\nAuto: " + auto +
-                "\nClientes (Máx. 3):" + customersList;
+                "\nClientes (Máx. 3):" + customers;
     }
 }
 

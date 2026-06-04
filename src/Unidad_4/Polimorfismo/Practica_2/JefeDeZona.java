@@ -9,7 +9,7 @@ public class JefeDeZona extends Empleado {
     private Vendedor[] vendors;
 
     public JefeDeZona(String cipher, String name, String lastName, String direction, int yearsOfService,
-                      int telephone, double salary, Empleado supervisor, String dispatch,
+                      String telephone, double salary, Empleado supervisor, String dispatch,
                       Auto auto, Secretario secretary) {
 
         super(cipher, name, lastName, direction, yearsOfService, telephone, salary, supervisor);

@@ -8,11 +8,11 @@ public class Empleado {
     private String lastName;
     private String direction;
     private int yearsOfService;
-    private int telephone;
+    private String telephone;
     private double salary;
     private Empleado supervisor;
 
-    public Empleado(String cipher, String name, String lastName, String direction, int yearsOfService, int telephone, double salary, Empleado supervisor) {
+    public Empleado(String cipher, String name, String lastName, String direction, int yearsOfService, String telephone, double salary, Empleado supervisor) {
         this.cipher = cipher;
         this.name = name;
         this.lastName = lastName;
@@ -22,6 +22,7 @@ public class Empleado {
         this.salary = salary;
         this.supervisor = supervisor;
     }
+
     public void ChangeSupervisor(Empleado newSupervisor){
         this.supervisor = newSupervisor;
     }
