@@ -44,6 +44,17 @@ public class MainPolimorfismo1 {
                     dInf("Vendedor creado con éxito");
                     break;
                 case 2:
+                    String claveSec;
+                    String nomSec;
+                    String apeSec;
+                    String direSec;
+                    int antiguedadSec;
+                    String telSec;
+                    double salarioSec;
+                    Empleado supervisorSec = new Empleado("221-ds","Brayan", "Lopez Cervantes", "Janitzio", 15, "4341284323", 15000, null);
+                    String despachoSec;
+                    String faxSec;
+                    Empleado sec = new Secretario(claveSec,nomSec, apeSec, direSec, antiguedadSec, telSec, salarioSec, supervisorSec,despachoSec, faxSec);
                     break;
                 case 3:
                     break;
