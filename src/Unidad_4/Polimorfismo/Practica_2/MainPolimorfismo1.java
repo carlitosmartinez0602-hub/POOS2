@@ -6,8 +6,9 @@ import java.util.ArrayList;
 public class MainPolimorfismo1 {
     static void main(String[] args) {
         ArrayList<Empleado> listaEmpleados = new ArrayList<>();
-
         int el =0;
+        Empleado supervisorSec = new Empleado("221-ds","Brayan", "Lopez Cervantes", "Janitzio", 15, "4341284323", 15000, null);
+
         do {
             String input = pDat("|-----Opciones-----|" +
                     "\n0.- Salir" +
@@ -44,19 +45,34 @@ public class MainPolimorfismo1 {
                     dInf("Vendedor creado con éxito");
                     break;
                 case 2:
-                    String claveSec;
-                    String nomSec;
-                    String apeSec;
-                    String direSec;
-                    int antiguedadSec;
-                    String telSec;
-                    double salarioSec;
-                    Empleado supervisorSec = new Empleado("221-ds","Brayan", "Lopez Cervantes", "Janitzio", 15, "4341284323", 15000, null);
-                    String despachoSec;
-                    String faxSec;
+                    String claveSec = pDat("Clave del secretario: ");
+                    String nomSec = pDat("Nombre del secretario: ");
+                    String apeSec = pDat("Apellidos del secretario: ");
+                    String direSec = pDat("Dirección del secretario: ");
+                    int antiguedadSec = Integer.parseInt(pDat("Antiguedad del secretario: "));
+                    String telSec = pDat("Telefono del secretario: ");
+                    double salarioSec = Double.parseDouble(pDat("Salario del secretario: "));
+                    String despachoSec = pDat("Despacho del secretario: ");
+                    String faxSec = pDat("Fax del secretario: ");
                     Empleado sec = new Secretario(claveSec,nomSec, apeSec, direSec, antiguedadSec, telSec, salarioSec, supervisorSec,despachoSec, faxSec);
+                    listaEmpleados.add(sec);
+                    dInf("Secretario creado con éxito");
                     break;
                 case 3:
+                    String claveJefe = pDat("Clave del jefe: ");
+                    String nomJefe = pDat("Nombre del jefe: ");
+                    String apeJefe = pDat("Apellido del jefe: ");
+                    String direJefe = pDat("Dirección del jefe: ");
+                    int antiguedadJefe = Integer.parseInt(pDat("Antiguedad del jefe: "));
+                    String telJefe = pDat("Telefono del jefe: ");
+                    double salJefe = Double.parseDouble(pDat("Salario del jefe: "));
+                    Empleado supervisorJefe = new Empleado("23-ASD", "Belinda", "Garcia Esquivel", "Ojo de agua", 30,"4349821732", 30000,null);
+                    String despachoJefe = pDat("Despacho del jefe: ");
+                    Auto autoJefe = new Auto("JLIS-23-32", "Toyota","Tsuru");
+                    Secretario secJefe = new Secretario("123-DASD", "Osciel", "Martinez", "Vasco", 31, "4341254322", 50000, supervisorSec,"33-OASN","34235");
+                    Empleado jefe = new JefeDeZona(claveJefe,nomJefe,apeJefe,direJefe, antiguedadJefe, telJefe, salJefe, supervisorJefe, despachoJefe,autoJefe, secJefe);
+                    listaEmpleados.add(jefe);
+                    dInf("Jefe creado con éxito");
                     break;
                 case 4:
                     if (listaEmpleados.isEmpty()) {
