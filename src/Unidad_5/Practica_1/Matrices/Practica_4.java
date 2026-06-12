@@ -34,9 +34,10 @@ public class Practica_4 {
                 "\nColumnas: " + columnas);
 
         //Tamaño de un cubo
-        int caras = listaCubo[0][0].length;
-        int filascubo = listaCubo.length;
-        int columnascubo = listaCubo[0].length;
+        int caras = listaCubo.length;
+        int filascubo = listaCubo[0].length;
+        int columnascubo = listaCubo[0][0].length;
+
         dInf("Tamaño del cubo: \n" +
                 "caras: " + caras +
                 "\nFilas: " + filascubo +
