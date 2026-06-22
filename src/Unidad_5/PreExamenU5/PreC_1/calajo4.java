@@ -27,6 +27,7 @@ public class calajo4 {
         double sumaTotal = 0;
         double masRecaudo = 0;
         double masvendido = vendedores[0][0];
+        double menosvendido = vendedores[0][0];
         double prom=0;
         double promfn=0;
         for (int i = 0; i < vendedores.length; i++) {
@@ -35,6 +36,9 @@ public class calajo4 {
                 recaudado += vendedores[i][j] * prod[j];
                 if (recaudado > masRecaudo){
                     masRecaudo = recaudado;
+                }
+                if (vendedores[i][j] < menosvendido) {
+                    menosvendido = vendedores[i][j];
                 }
                 if (vendedores[i][j] > masvendido) {
                     masvendido = vendedores[i][j];
@@ -47,6 +51,7 @@ public class calajo4 {
         }
         System.out.println("EL que mas recaudo: " +  + masRecaudo);
         System.out.println("El producto más vendido fue: " + masvendido);
+        System.out.println("Lo menos vendido: " + menosvendido  );
         System.out.println("Suma total entre vendedores: "+ sumaTotal);
         System.out.println("Promedio de ventas: " + promfn);
 
