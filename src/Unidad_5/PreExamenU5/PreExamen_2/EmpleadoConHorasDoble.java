@@ -27,6 +27,6 @@ public class EmpleadoConHorasDoble extends Empleado{
         return "\n|-----Empleado Con Horas Dobles-----|\n" +
                 super.toString() +
                 "\nHoras extras: " + horasExtras+
-                "\nSalario total: " + calcularSalario();
+                "\nSalario t    otal: " + calcularSalario();
     }
 }

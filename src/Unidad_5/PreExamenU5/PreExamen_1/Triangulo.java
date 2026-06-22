@@ -34,7 +34,7 @@ public class Triangulo extends Figura{
     public String toString() {
         return "|-----Triangulo-----|" +
                 "\nBase: " + base +
-                "\nAltura=" + altura +
+                "\nAltura: " + altura +
                 "\nÁrea: " + calcularArea();
     }
 }
